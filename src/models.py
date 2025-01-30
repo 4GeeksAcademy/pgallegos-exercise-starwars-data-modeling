@@ -13,8 +13,6 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     __tablename__ = 'user'
-    # Here we define columns for the table person
-    # Notice that each column is also a normal Python instance attribute.
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
 class Favorites(db.Model):
@@ -35,8 +33,6 @@ class Species(db.Model):
 
 class Planets(db.Model):
     __tablename__ = 'planets'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
     uid = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50))
     gravity = db.Column(db.String(250))
